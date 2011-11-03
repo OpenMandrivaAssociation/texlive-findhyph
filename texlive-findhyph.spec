@@ -1,3 +1,9 @@
+# revision 18835
+# category Package
+# catalog-ctan /support/findhyph
+# catalog-date 2009-11-09 22:14:03 +0100
+# catalog-license gpl
+# catalog-version 2.0
 Name:		texlive-findhyph
 Version:	2.0
 Release:	1
@@ -46,6 +52,7 @@ word that's being referenced.
 %doc %{_texmfdistdir}/doc/support/findhyph/findhyph.txt
 %doc %{_mandir}/man1/findhyph.1*
 %doc %{_texmfdir}/doc/man/man1/findhyph.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,3 +69,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
