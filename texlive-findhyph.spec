@@ -1,12 +1,12 @@
-# revision 18835
+# revision 25322
 # category Package
 # catalog-ctan /support/findhyph
-# catalog-date 2009-11-09 22:14:03 +0100
+# catalog-date 2012-02-06 17:29:05 +0100
 # catalog-license gpl
-# catalog-version 2.0
+# catalog-version 3.0
 Name:		texlive-findhyph
-Version:	2.0
-Release:	2
+Version:	3.0
+Release:	1
 Summary:	Find hyphenated words in a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/findhyph
@@ -37,7 +37,7 @@ word that's being referenced.
 %files
 %{_bindir}/findhyph
 %{_texmfdistdir}/scripts/findhyph/findhyph
-%doc %{_texmfdistdir}/doc/support/findhyph/Makefile
+%doc %{_texmfdistdir}/doc/support/findhyph/Makefile.doc
 %doc %{_texmfdistdir}/doc/support/findhyph/README
 %doc %{_texmfdistdir}/doc/support/findhyph/findhyph.bat
 %doc %{_texmfdistdir}/doc/support/findhyph/findhyph.txt
