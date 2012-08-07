@@ -1,4 +1,4 @@
-# revision 25322
+# revision 26313
 # category Package
 # catalog-ctan /support/findhyph
 # catalog-date 2012-02-06 17:29:05 +0100
