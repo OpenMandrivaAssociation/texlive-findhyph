@@ -1,12 +1,12 @@
-# revision 26313
+# revision 30915
 # category Package
 # catalog-ctan /support/findhyph
-# catalog-date 2012-02-06 17:29:05 +0100
+# catalog-date 2013-06-21 02:36:55 +0200
 # catalog-license gpl
-# catalog-version 3.0
+# catalog-version 3.3
 Name:		texlive-findhyph
-Version:	3.0
-Release:	2
+Version:	3.3
+Release:	1
 Summary:	Find hyphenated words in a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/findhyph
@@ -37,12 +37,12 @@ word that's being referenced.
 %files
 %{_bindir}/findhyph
 %{_texmfdistdir}/scripts/findhyph/findhyph
+%doc %{_mandir}/man1/findhyph.1*
+%doc %{_texmfdistdir}/doc/man/man1/findhyph.man1.pdf
 %doc %{_texmfdistdir}/doc/support/findhyph/Makefile.doc
 %doc %{_texmfdistdir}/doc/support/findhyph/README
 %doc %{_texmfdistdir}/doc/support/findhyph/findhyph.bat
 %doc %{_texmfdistdir}/doc/support/findhyph/findhyph.txt
-%doc %{_mandir}/man1/findhyph.1*
-%doc %{_texmfdir}/doc/man/man1/findhyph.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -56,29 +56,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/findhyph/findhyph findhyph
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-2
-+ Revision: 812261
-- Update to latest release.
-- Update to latest release.
-
-* Wed Feb 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 3.0-1
-+ Revision: 772063
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 2.0-2
-+ Revision: 751894
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 2.0-1
-+ Revision: 718442
-- texlive-findhyph
-- texlive-findhyph
-- texlive-findhyph
-- texlive-findhyph
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
