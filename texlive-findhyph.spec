@@ -6,7 +6,7 @@
 # catalog-version 3.3
 Name:		texlive-findhyph
 Version:	3.4
-Release:	1
+Release:	2
 Summary:	Find hyphenated words in a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/findhyph
