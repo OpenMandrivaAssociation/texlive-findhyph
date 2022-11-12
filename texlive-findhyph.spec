@@ -1,18 +1,12 @@
-# revision 30915
-# category Package
-# catalog-ctan /support/findhyph
-# catalog-date 2013-06-21 02:36:55 +0200
-# catalog-license gpl
-# catalog-version 3.3
 Name:		texlive-findhyph
-Version:	3.4
-Release:	2
+Version:	47444
+Release:	1
 Summary:	Find hyphenated words in a document
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/findhyph
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -26,12 +20,12 @@ contains enough context to enable you to find the hyphenated
 word that's being referenced.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,14 +40,14 @@ word that's being referenced.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/findhyph/findhyph findhyph
+ln -sf %{_texmfdistdir}/scripts/findhyph/findhyph findhyph
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
