@@ -13,8 +13,6 @@ Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.r%{tl_r
 Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/findhyph.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
 BuildSystem:	texlive
-BuildRequires:	texlive-tlpkg
-%texlive_base_requires
 Requires:	texlive(findhyph.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
 
