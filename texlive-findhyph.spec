@@ -1,5 +1,6 @@
 %global tl_name findhyph
 %global tl_revision 47444
+%global tl_bin_links findhyph:%{_texmfdistdir}/scripts/findhyph/findhyph
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(findhyph.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 Findhyph is a Perl script that will analyse the log file from running
